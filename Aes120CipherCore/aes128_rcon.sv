@@ -1,7 +1,9 @@
 //-----------------------------------------------------------
 // Function: Rcon of AES-128 used in Key Expansion
 //-----------------------------------------------------------
-
+// Author: Nguyen Hung Quan
+// Website: http://nguyenquanicd.blogspot.com/
+//-----------------------------------------------------------
 function logic [31:0] aes128_rcon;
   input [3:0] rkey_sel;
 	case (rkey_sel)

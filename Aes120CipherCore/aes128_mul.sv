@@ -3,6 +3,9 @@
 //            1) Multiplication
 //            2) modulo m(x) = x^8 + x^4 + x^3 + x + 1
 //===================================================================
+// Author: Nguyen Hung Quan
+// Website: http://nguyenquanicd.blogspot.com/
+//-----------------------------------------------------------
 function logic [7:0] mul2;
   input [7:0] mul2_in;
   mul2[7:0] = (mul2_in[7] == 1'b1)?

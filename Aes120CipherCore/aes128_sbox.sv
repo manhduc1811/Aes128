@@ -1,6 +1,9 @@
 //-----------------------------------------------------------
 // Function: S-Box of AES-128
 //-----------------------------------------------------------
+// Author: Nguyen Hung Quan
+// Website: http://nguyenquanicd.blogspot.com/
+//-----------------------------------------------------------
 function logic [7:0] aes128_sbox;
   input [7:0] sbox_in;
 	case (sbox_in[7:0])
