@@ -1,4 +1,4 @@
-//-----------------------------------------------------------
+//===================================================================
 // Function:	AES-128 encrypt/cipher core
 //-----------------------------------------------------------
 // Author: Nguyen Hung Quan
@@ -75,22 +75,22 @@ module aes128_cipher_core(
   //------------------------------------------------------------------------
   // SubBytes - Sbox
   //------------------------------------------------------------------------
-  assign after_subBytes[127:120] = aes128_sbox(subbytes_sel[127:120]);
-  assign after_subBytes[119:112] = aes128_sbox(subbytes_sel[119:112]);
-  assign after_subBytes[111:104] = aes128_sbox(subbytes_sel[111:104]);
-  assign after_subBytes[103:96]	 = aes128_sbox(subbytes_sel[103:96]);
-  assign after_subBytes[95:88]	 = aes128_sbox(subbytes_sel[95:88]);
-  assign after_subBytes[87:80]	 = aes128_sbox(subbytes_sel[87:80]);
-  assign after_subBytes[79:72]	 = aes128_sbox(subbytes_sel[79:72]);
-  assign after_subBytes[71:64]	 = aes128_sbox(subbytes_sel[71:64]);
-  assign after_subBytes[63:56]	 = aes128_sbox(subbytes_sel[63:56]);
-  assign after_subBytes[55:48]	 = aes128_sbox(subbytes_sel[55:48]);
-  assign after_subBytes[47:40]	 = aes128_sbox(subbytes_sel[47:40]);
-  assign after_subBytes[39:32]	 = aes128_sbox(subbytes_sel[39:32]);
-  assign after_subBytes[31:24]	 = aes128_sbox(subbytes_sel[31:24]);
-  assign after_subBytes[23:16]	 = aes128_sbox(subbytes_sel[23:16]);
-  assign after_subBytes[15:8]	   = aes128_sbox(subbytes_sel[15:8]);
-  assign after_subBytes[7:0]	   = aes128_sbox(subbytes_sel[7:0]);
+  assign after_subBytes[127:120] = aes128_sbox(subbytes_sel[127:120], 1'b1);
+  assign after_subBytes[119:112] = aes128_sbox(subbytes_sel[119:112], 1'b1);
+  assign after_subBytes[111:104] = aes128_sbox(subbytes_sel[111:104], 1'b1);
+  assign after_subBytes[103:96]	 = aes128_sbox(subbytes_sel[103:96],  1'b1);
+  assign after_subBytes[95:88]	 = aes128_sbox(subbytes_sel[95:88],   1'b1);
+  assign after_subBytes[87:80]	 = aes128_sbox(subbytes_sel[87:80],   1'b1);
+  assign after_subBytes[79:72]	 = aes128_sbox(subbytes_sel[79:72],   1'b1);
+  assign after_subBytes[71:64]	 = aes128_sbox(subbytes_sel[71:64],   1'b1);
+  assign after_subBytes[63:56]	 = aes128_sbox(subbytes_sel[63:56],   1'b1);
+  assign after_subBytes[55:48]	 = aes128_sbox(subbytes_sel[55:48],   1'b1);
+  assign after_subBytes[47:40]	 = aes128_sbox(subbytes_sel[47:40],   1'b1);
+  assign after_subBytes[39:32]	 = aes128_sbox(subbytes_sel[39:32],   1'b1);
+  assign after_subBytes[31:24]	 = aes128_sbox(subbytes_sel[31:24],   1'b1);
+  assign after_subBytes[23:16]	 = aes128_sbox(subbytes_sel[23:16],   1'b1);
+  assign after_subBytes[15:8]	   = aes128_sbox(subbytes_sel[15:8],    1'b1);
+  assign after_subBytes[7:0]	   = aes128_sbox(subbytes_sel[7:0],     1'b1);
   //------------------------------------------------------------------------
   // ShiftRows - Actual is a rotate
   //------------------------------------------------------------------------
